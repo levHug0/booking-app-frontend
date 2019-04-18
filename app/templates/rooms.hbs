@@ -1,0 +1,12 @@
+{{#link-to "home"}}Home Page{{/link-to}}
+<br>
+<br>
+<h2>You are in the rooms page</h2>
+
+<ul>
+    {{#each this.model.rooms as |room|}}
+        <li>{{#link-to 'room' room.id}}{{room.name}} - {{room.id}}{{/link-to}}</li>
+    {{/each}}
+</ul>
+
+<button {{action "checkModel"}}>Check Model</button>
