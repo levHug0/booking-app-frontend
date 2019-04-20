@@ -1,4 +1,4 @@
-$landingpage-bg: 'https://images.unsplash.com/photo-1430285561322-7808604715df?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80';
+$landingpage-bg: 'https://images.unsplash.com/photo-1505796215109-a97d9dd14561?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80';
 
 body, html {
     padding: 0;
@@ -6,9 +6,9 @@ body, html {
 }
 
 .landing-background {
-    background: url($landingpage-bg) no-repeat center center fixed;
+    /*background: url('https://media-public.canva.com/MADCW1YPW2Q/2/0/thumbnail_large-2.jpg') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover;
+    background-size: cover;*/
 }
