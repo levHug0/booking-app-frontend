@@ -2,6 +2,14 @@ $top-tier: #F7DC69;
 $mid-tier: #7CE6D7;
 $low-tier: #ECA2D2;
 
+$large: 1200px;
+
+@mixin not-extra-large {
+    @media (max-width: #{$large}) {
+        @content;
+    }
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -65,6 +73,18 @@ $low-tier: #ECA2D2;
 
         a {
             margin-left: auto !important;
+        }
+    }
+}
+
+#room-standalone {
+    margin-top: 20px;
+    
+    .ui.card {
+        width: 80%;
+
+        @include not-extra-large {
+            width: 100%;
         }
     }
 }

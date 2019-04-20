@@ -1,3 +1,6 @@
-<h3>{{this.model.room.name}}</h3>
+<main class="container-fluid">
+    {{#link-to 'rooms'}}Back{{/link-to}}
+    {{room-details room=this.model.room}}
+</main>
 
-{{#link-to 'rooms'}}Back{{/link-to}}
+

@@ -1,0 +1,41 @@
+
+<div class="row" id="room-standalone">
+    <div class="col-12 col-md-6">
+        <div class="ui card">
+            <div class="content" style="text-align: center;">
+                <div class="header">
+                    {{room.name}}
+                </div>
+            </div>
+
+            <div class="image">
+                <img src="{{room.image}}" alt="Image" class="img-fluid">
+            </div>
+            
+            <div class="content">
+                <div style="font-size: 1.1em;">
+                    <i class="dollar sign icon"></i>{{room.price}} per stay
+
+                    <span class="right floated">
+                        <i class="bed icon"></i>{{room.capacity}}
+                    </span> 
+                </div>
+                
+                <div class="meta" style="padding-top: 10px; font-style: italic;">
+                    <span class="date">{{room.address}}</span>
+                </div>
+
+                <div class="description">{{room.details}}</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-12 col-md-6">
+        <div class="container">
+            <div class="input-field col s12">
+                <input placeholder="Email Address" id="email" type="email" class="validate">
+                <label for="first_name">Email Address</label>
+            </div>
+        </div>
+    </div>
+</div>
