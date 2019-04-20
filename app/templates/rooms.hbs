@@ -1,12 +1,49 @@
-{{#link-to "home"}}Home Page{{/link-to}}
-<br>
-<br>
-<h2>You are in the rooms page</h2>
+<style>
+    body { background-color: #eaeaea; }
+</style>
 
-<ul>
-    {{#each this.model.rooms as |room|}}
-        <li>{{#link-to 'room' room.id}}({{room.id}}) {{room.name}}{{/link-to}}</li>
-    {{/each}}
-</ul>
+<header class="rooms-heading unclickable">
+    <div class="container">
+        {{#link-to 'home'}}
+            <img src="/assets/images/logo.png" alt="Logo">
+        {{/link-to}}
+    </div>
+</header>
 
-<button {{action "checkModel"}}>Check Model</button>
+<main class="container">
+    <div class="row" id="rooms-list">
+        {{#each sorted_rooms as |room|}}
+            <div class="col-12 col-md-6">
+                <div class="ui card">
+                    <div class="image">
+                        {{#link-to 'room' room.id}}
+                            <img src="{{room.image}}" alt="Image" class="img-fluid">
+                        {{/link-to}}
+                    </div>
+                    
+                    <div class="content">
+                        <div class="header">{{room.name}}</div>
+                        
+                        <div class="meta">
+                            <span class="date">{{room.address}}</span>
+                        </div>
+
+                        <div class="description">{{room.details}}</div>
+                    </div>
+
+                    <div class="extra content">
+                        <span>
+                            <i class="dollar sign icon"></i>{{room.price}} per stay &nbsp; | &nbsp; 
+                            <i class="bed icon"></i>{{room.capacity}}
+                        </span>
+
+                        {{#link-to 'room' room.id class="ui mini primary button right floated"}}
+                            <i class="right arrow icon"></i> View
+                        {{/link-to}}
+                    </div>
+
+                </div>
+            </div>
+        {{/each}}
+    </div>
+</main>
