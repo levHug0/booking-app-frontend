@@ -1,13 +1,71 @@
-body, html {
+$top-tier: #F7DC69;
+$mid-tier: #7CE6D7;
+$low-tier: #ECA2D2;
+
+* {
     padding: 0;
     margin: 0;
 }
 
-.landing {
+.landing-page {
+    text-align: center;
+
+    img {
+        padding: 180px 0 40px 0 !important;
+    }
+}
+
+.unclickable {
     text-align: center;
     -webkit-user-select: none; /* webkit (safari, chrome) browsers */
     -moz-user-select: none; /* mozilla browsers */
     -khtml-user-select: none; /* webkit (konqueror) browsers */
     -ms-user-select: none; /* IE10+ */
+}
+
+.rooms-heading {
+    background-color: white; 
+    width: 100%; 
+    position: fixed; 
+    z-index: 100;
+
+    .container {
+        display: flex;
+        align-items: center;
+    }
+
+    a {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    img {
+        width:140px; 
+        height: auto;
+    }
+}
+
+#rooms-list {
+    background-color: #fff;
+    height: 100%;
+    margin-bottom: 0;
+    padding-top: 57px !important;
+
+    .col-12 {
+        padding: 10px !important;
+    }
+
+    .ui.card {
+        width: 100% !important;
+    }
+
+    .extra.content {
+        display: flex !important; 
+        align-items: center !important;
+
+        a {
+            margin-left: auto !important;
+        }
+    }
 }
 @import "ember-bootstrap/bootstrap";
