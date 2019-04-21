@@ -1,0 +1,62 @@
+<div class="row" id="room-standalone">
+    <div class="col-12 col-md-6">
+        <div class="ui card">
+            <div class="content" style="text-align: center;">
+                <div class="header">
+                    {{room.name}}
+                </div>
+            </div>
+
+            <div class="image">
+                <img src="{{room.image}}" alt="Image" class="img-fluid">
+            </div>
+            
+            <div class="content">
+                <div style="font-size: 1.1em;">
+                    <i class="dollar sign icon"></i>{{room.price}} per stay
+
+                    <span class="right floated">
+                        <i class="bed icon"></i>{{room.capacity}}
+                    </span> 
+                </div>
+                
+                <div class="meta" style="padding-top: 10px; font-style: italic;">
+                    <span class="date">{{room.address}}</span>
+                </div>
+
+                <div class="description">{{room.details}}</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-12 col-md-6" id="booking-form">
+        <div class="container">
+            <div class="form-group col-12">
+                <label for="email">Email address</label>
+                <input type="email" class="form-control" id="email" aria-describedby="email-info" placeholder="Enter email" required>
+                <small id="email-info" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+
+            <div class="col-12">
+                Capacity: <input type="number" name="quantity" min="1" max="{{room.capacity}}" value="{{room.capacity}}" style="width: 80px;">
+            </div>
+
+            <div class="form-row" style="padding: 10px;">
+                <div class="form-group col-6" >
+                    <label for="startDate">Start Date</label>
+                    <input id="startDate" type="text" class="form-control date-pickr">
+                </div>
+
+                <div class="form-group col-6" >
+                    <label for="endDate">End Date</label>
+                    <input id="endDate" type="text" class="form-control date-pickr" aria-describedby="end-info">
+                    <small id="end-info" class="form-text text-muted">Maximum days per booking - 7 days from Start Day</small>
+                </div>
+            </div>
+
+            <div class="col-12" style="padding: 10px;">
+                <button class="ui primary button" {{action "book"}}>Book</button>
+            </div>
+        </div>
+    </div>
+</div>
