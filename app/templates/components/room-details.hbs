@@ -30,16 +30,16 @@
         </div>
     </div>
 
-    <div class="col-12 col-md-6">
+    <div class="col-12 col-md-6" id="booking-form">
         <div class="container">
             <div class="form-group col-12">
                 <label for="email">Email address</label>
-                <input type="email" class="form-control" id="email" aria-describedby="email-info" placeholder="Enter email">
+                <input type="email" class="form-control" id="email" aria-describedby="email-info" placeholder="Enter email" required>
                 <small id="email-info" class="form-text text-muted">We'll never share your email with anyone else.</small>
             </div>
 
             <div class="col-12">
-                Capacity: <input type="number" name="quantity" min="1" max="{{room.capacity}}" style="width: 80px;">
+                Capacity: <input type="number" name="quantity" min="1" max="{{room.capacity}}" value="{{room.capacity}}" style="width: 80px;">
             </div>
 
             <div class="form-row" style="padding: 10px;">
@@ -55,7 +55,7 @@
             </div>
 
             <div class="col-12" style="padding: 10px;">
-                <button class="ui primary button">Book</button>
+                <button class="ui primary button" {{action "book"}}>Book</button>
             </div>
         </div>
     </div>
