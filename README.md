@@ -6,20 +6,19 @@ This is created using EmberJS Framework. I have a year commercial experience usi
 
 * RESTAdapter inside app/adapters/application.js, I wasn't aware that the adapter is expecting a response nested inside a property, for example /rooms/1 is expecting "room": { "title": "Luxury room", "id": 1 }
 
-######Solution: On the backend latest SailsJS by default doesn't respond with a key of the data, so I had to create a function inside the RoomController which does exactly the same as GET /rooms/1, but modified so response is i.e. "room": { "title": "Luxury room", "id": 1 }, instead of { "title": "Luxury room", "id": 1 }
+###### Solution: On the backend latest SailsJS by default doesn't respond with a key of the data, so I had to create a function inside the RoomController which does exactly the same as GET /rooms/1, but modified so response is i.e. "room": { "title": "Luxury room", "id": 1 }, instead of { "title": "Luxury room", "id": 1 }
 
 * UI design, I'm not a very good designer, so I spent about a day creating prototypes on how the whole site would look
 
-######Solution: Initially the landing page was suppose to have an image background, but i just settled with a simple logo and white background, since I spent too much on this.
+###### Solution: Initially the landing page was suppose to have an image background, but i just settled with a simple logo and white background, since I spent too much on this.
 
 * Initially I was planning on using Materialize design datepicker, instead of flatpickr, but after installing, it caused a huge error that broke the whole site, and reverting the whole thing would've taken too long, so
 
-######Solution: I redid the project, I now have two folders called booking-app and booking-app-frontend
+###### Solution: I redid the project, I now have two folders called booking-app and booking-app-frontend
 
 * On booking, I disabled dates that are booked to prevent users from selecting already booked dates, but users could book from the 1st of January to 31st of December and the whole booking for a page would be locked.
 
-######Solution: I implemented a check, so that bookings are only 7 days long i.e. Start date and End date are within 7 days apart,
-so an error would occur if end date is longer than 7 days from start date
+###### Solution: I implemented a check, so that bookings are only 7 days long i.e. Start date and End date are within 7 days apart, so an error would occur if end date is longer than 7 days from start date
 
 * Error Handling and Success handling when booking, UI wise could've been improved, but I ultimate settled with alerts cause I'm running out of time
 
