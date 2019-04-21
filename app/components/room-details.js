@@ -41,15 +41,25 @@ export default Component.extend({
                 error = true;
             }
 
+            // unix time stamp
+            startDate = moment(startDate).format('X');
+            endDate = moment(endDate).format('X');
+
+            let estimatedEnd = parseInt(startDate) + (86400 * 7);
+            
+            // check if booking duration is within a week
+            if ( parseInt(endDate) > estimatedEnd ) {
+                error = true;
+            }
+
             if ( error ) {
                 alert("Something went wrong. Check all Inputs and Try Again.");
             } else {
-                // send data
                 let payload = {
                     email: email,
                     capacity: capacity,
-                    start: moment(startDate).format('X'),  // unix time stamp
-                    end: moment(endDate).format('X'),
+                    start: startDate,
+                    end: endDate,
                     id: roomId
                 };
 
@@ -57,7 +67,7 @@ export default Component.extend({
                 Ember.$.post('http://localhost:1337/bookingdetails', payload, (data, status) => {
                     if (status === "success") {
                         alert(data);
-                        window.location.replace('/');
+                        window.location.replace('/rooms');
                     }
                 }).fail( err => {
                     alert('Error: ' + err.responseText);
