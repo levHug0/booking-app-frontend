@@ -42,6 +42,18 @@
                 Capacity: <input type="number" name="quantity" min="1" max="{{room.capacity}}" style="width: 80px;">
             </div>
 
+            <div class="form-row" style="padding: 10px;">
+                <div class="form-group col-6" >
+                    <label for="startDate">Start Date</label>
+                    <input id="startDate" type="text" class="form-control date-pickr">
+                </div>
+
+                <div class="form-group col-6" >
+                    <label for="endDate">End Date</label>
+                    <input id="endDate" type="text" class="form-control date-pickr">
+                </div>
+            </div>
+
             <div class="col-12" style="padding: 10px;">
                 <button class="ui primary button">Book</button>
             </div>
