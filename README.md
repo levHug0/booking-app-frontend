@@ -62,6 +62,7 @@ You will need the following things properly installed on your computer.
 ## Running / Development
 
 * Using a terminal cd into the project directory i.e. '/booking-app-frontend'
+* Type `npm install`
 * Type `ember serve` or `ember s`
 * Ignore lint and identation errors and wait until you see 'Build successful'
 * Visit app at [http://localhost:4200](http://localhost:4200).
